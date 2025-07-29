@@ -8,7 +8,7 @@ const Home = () => {
 
   const handlePTClick = () => {
     // Replace with your navigation logic
-    console.log('Navigate to /pt');
+    console.log('Navigate to /PT');
   };
 
   return (
@@ -47,7 +47,7 @@ const Home = () => {
           onClick={handlePTClick}
           className="group relative bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:from-orange-500 hover:to-red-500 overflow-hidden animate-slide-in-right"
         >
-          <span className="relative z-10">Find PT</span>
+          <span className="relative z-10">Find Practical Training</span>
           <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer-delay"></div>
