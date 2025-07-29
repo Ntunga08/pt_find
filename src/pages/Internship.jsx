@@ -27,10 +27,12 @@ const InternshipListings = () => {
       category: 'Technology',
       rating: 4.8,
       applicants: 45,
-      description: 'Join our dynamic team and work on cutting-edge web applications using React and modern technologies.',
+      description: 'Join our dynamic team and work on cutting-edge web applications using React and modern technologies. You will collaborate with senior developers and gain hands-on experience in agile development processes.',
       requirements: ['React.js', 'JavaScript', 'HTML/CSS', 'Git'],
       posted: '2 days ago',
-      urgent: true
+      urgent: true,
+      companySize: '50-100 employees',
+      benefits: ['Mentorship Program', 'Certificate', 'Networking Events']
     },
     {
       id: 2,
@@ -44,30 +46,15 @@ const InternshipListings = () => {
       category: 'Marketing',
       rating: 4.6,
       applicants: 32,
-      description: 'Learn digital marketing strategies, social media management, and content creation in a fast-paced environment.',
+      description: 'Learn digital marketing strategies, social media management, and content creation in a fast-paced environment. Work on real campaigns and develop your portfolio.',
       requirements: ['Social Media', 'Content Writing', 'Analytics', 'Creativity'],
       posted: '1 week ago',
-      urgent: false
+      urgent: false,
+      companySize: '20-50 employees',
+      benefits: ['Flexible Hours', 'Remote Work', 'Portfolio Development']
     },
     {
       id: 3,
-      title: 'UI/UX Design Intern',
-      company: 'Design Studio Pro',
-      logo: '🎨',
-      location: 'Arusha',
-      type: 'Practical Training',
-      duration: '6 months',
-      stipend: 'TZS 400,000/month',
-      category: 'Design',
-      rating: 4.9,
-      applicants: 28,
-      description: 'Work alongside senior designers on real client projects and build your portfolio with impactful designs.',
-      requirements: ['Figma', 'Adobe Creative Suite', 'Prototyping', 'User Research'],
-      posted: '3 days ago',
-      urgent: true
-    },
-    {
-      id: 4,
       title: 'Business Analyst Intern',
       company: 'FinanceMax Group',
       logo: '📊',
@@ -78,30 +65,15 @@ const InternshipListings = () => {
       category: 'Business',
       rating: 4.7,
       applicants: 18,
-      description: 'Analyze business processes, create reports, and support strategic decision-making initiatives.',
+      description: 'Analyze business processes, create reports, and support strategic decision-making initiatives. Gain exposure to financial modeling and market analysis.',
       requirements: ['Excel', 'Data Analysis', 'PowerPoint', 'Problem Solving'],
       posted: '5 days ago',
-      urgent: false
+      urgent: false,
+      companySize: '100+ employees',
+      benefits: ['Professional Training', 'Career Guidance', 'Industry Exposure']
     },
     {
-      id: 5,
-      title: 'Software Engineering Intern',
-      company: 'InnovateTech Hub',
-      logo: '⚡',
-      location: 'Remote',
-      type: 'Practical Training',
-      duration: '5 months',
-      stipend: 'TZS 450,000/month',
-      category: 'Technology',
-      rating: 4.9,
-      applicants: 67,
-      description: 'Build scalable applications and work with experienced engineers on innovative projects.',
-      requirements: ['Python', 'JavaScript', 'Database Design', 'API Development'],
-      posted: '1 day ago',
-      urgent: true
-    },
-    {
-      id: 6,
+      id: 4,
       title: 'Healthcare Assistant Intern',
       company: 'MedCare International',
       logo: '🏥',
@@ -112,10 +84,50 @@ const InternshipListings = () => {
       category: 'Healthcare',
       rating: 4.5,
       applicants: 23,
-      description: 'Support healthcare professionals and gain hands-on experience in medical administration.',
+      description: 'Support healthcare professionals and gain hands-on experience in medical administration. Learn about patient care protocols and healthcare management systems.',
       requirements: ['Medical Knowledge', 'Communication', 'Attention to Detail', 'Empathy'],
       posted: '4 days ago',
-      urgent: false
+      urgent: false,
+      companySize: '200+ employees',
+      benefits: ['Clinical Experience', 'Medical Training', 'Professional References']
+    },
+    {
+      id: 5,
+      title: 'Financial Analyst Intern',
+      company: 'Capital Investments Ltd',
+      logo: '💰',
+      location: 'Dar es Salaam',
+      type: 'Internship',
+      duration: '3 months',
+      stipend: 'TZS 320,000/month',
+      category: 'Finance',
+      rating: 4.6,
+      applicants: 29,
+      description: 'Assist with financial modeling, market research, and investment analysis in a professional environment. Work alongside experienced analysts on real projects.',
+      requirements: ['Excel', 'Financial Modeling', 'Research Skills', 'Analytical Thinking'],
+      posted: '3 days ago',
+      urgent: true,
+      companySize: '75-100 employees',
+      benefits: ['CFA Study Support', 'Financial Software Training', 'Industry Connections']
+    },
+    {
+      id: 6,
+      title: 'Software Development Intern',
+      company: 'CodeCraft Solutions',
+      logo: '⚡',
+      location: 'Remote',
+      type: 'Internship',
+      duration: '4 months',
+      stipend: 'TZS 380,000/month',
+      category: 'Technology',
+      rating: 4.8,
+      applicants: 52,
+      description: 'Work on real projects with our development team and learn industry best practices in software development. Participate in code reviews and agile ceremonies.',
+      requirements: ['Python', 'JavaScript', 'Problem Solving', 'Team Collaboration'],
+      posted: '1 day ago',
+      urgent: true,
+      companySize: '30-50 employees',
+      benefits: ['Code Mentorship', 'Open Source Contributions', 'Tech Conferences']
     }
   ];
 
@@ -152,190 +164,247 @@ const InternshipListings = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-black text-white">
+      <div className="max-w-7xl mx-auto px-6 py-12">
         
-        {/* Simple Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-green-400 mb-4">
-            InternConnect
+        {/* Hero Section */}
+        <div className="text-center mb-16 bg-gray-900 rounded-2xl border border-gray-800 p-12">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Find Your Perfect <span className="text-green-400">Internship</span>
           </h1>
-          <p className="text-xl text-gray-300">
-            Find Your Perfect Internship
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Connect with leading companies across Tanzania and launch your career with meaningful internship experiences that matter.
           </p>
-        </div>
-
-        {/* Simple Search & Filters */}
-        <div className="mb-8 space-y-4">
-          <div className="flex flex-col md:flex-row gap-4">
-            <input
-              type="text"
-              placeholder="🔍 Search internships..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="flex-1 p-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-green-500 focus:outline-none"
-            />
-            
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="p-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:border-cyan-500 focus:outline-none"
-            >
-              {categories.map(category => (
-                <option key={category} value={category} className="bg-gray-900">
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
-            
-            <select
-              value={selectedLocation}
-              onChange={(e) => setSelectedLocation(e.target.value)}
-              className="p-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:border-orange-500 focus:outline-none"
-            >
-              {locations.map(location => (
-                <option key={location} value={location} className="bg-gray-900">
-                  {location === 'all' ? 'All Locations' : location}
-                </option>
-              ))}
-            </select>
-          </div>
           
-          <div className="text-center">
-            <span className="text-green-400 font-bold text-lg">{filteredInternships.length}</span>
-            <span className="text-gray-400 ml-2">opportunities found</span>
+          {/* Search Section */}
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-4 mb-8">
+              <div className="flex-1 relative">
+                <input
+                  type="text"
+                  placeholder="Search internships by title, company, or keywords..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full p-4 pr-12 bg-gray-800 border-2 border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-green-500 focus:outline-none transition-colors"
+                />
+                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-green-400 text-lg">
+                  🔍
+                </div>
+              </div>
+              
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none transition-colors min-w-[180px]"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category} className="bg-gray-800">
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+                ))}
+              </select>
+              
+              <select
+                value={selectedLocation}
+                onChange={(e) => setSelectedLocation(e.target.value)}
+                className="p-4 bg-gray-800 border-2 border-gray-700 rounded-xl text-white focus:border-orange-500 focus:outline-none transition-colors min-w-[180px]"
+              >
+                {locations.map(location => (
+                  <option key={location} value={location} className="bg-gray-800">
+                    {location === 'all' ? 'All Locations' : location}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            <div className="flex items-center justify-center gap-4 text-gray-300">
+              <span className="font-bold text-2xl text-green-400">{filteredInternships.length}</span>
+              <span className="text-lg">quality internship opportunities available</span>
+            </div>
           </div>
         </div>
 
-        {/* Clean Job Cards */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Internship Listings */}
+        <div className="space-y-8">
           {filteredInternships.map((internship) => (
             <div
               key={internship.id}
-              className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
+              className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-[1.01]"
             >
-              {/* Card Header */}
-              <div className="flex justify-between items-start mb-4">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{internship.logo}</span>
-                  <div>
-                    <h3 className={`font-bold text-lg ${getCategoryColor(internship.category)}`}>
-                      {internship.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm">{internship.company}</p>
+              <div className="grid lg:grid-cols-3 gap-8">
+                
+                {/* Left Section - Company & Job Info */}
+                <div className="lg:col-span-2">
+                  <div className="flex items-start gap-6 mb-6">
+                    <div className="text-5xl bg-gray-800 p-4 rounded-2xl border border-gray-700">
+                      {internship.logo}
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h2 className={`text-3xl font-bold mb-2 ${getCategoryColor(internship.category)}`}>
+                            {internship.title}
+                          </h2>
+                          <p className="text-xl text-white font-semibold mb-2">
+                            {internship.company}
+                          </p>
+                          <p className="text-gray-400">
+                            {internship.companySize}
+                          </p>
+                        </div>
+                        <button
+                          onClick={() => toggleSaveJob(internship.id)}
+                          className={`text-2xl p-3 rounded-full transition-all ${
+                            savedJobs.has(internship.id) 
+                              ? 'text-yellow-400 bg-yellow-900/30' 
+                              : 'text-gray-500 hover:text-yellow-400 hover:bg-yellow-900/30'
+                          }`}
+                        >
+                          {savedJobs.has(internship.id) ? '⭐' : '☆'}
+                        </button>
+                      </div>
+                      
+                      {/* Job Details */}
+                      <div className="grid grid-cols-2 gap-4 text-sm">
+                        <div className="flex items-center gap-3">
+                          <span className="text-blue-400 text-lg">📍</span>
+                          <span className="text-gray-300">{internship.location}</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-orange-400 text-lg">⏰</span>
+                          <span className="text-gray-300">{internship.duration}</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-green-400 text-lg">💰</span>
+                          <span className="text-green-400 font-semibold">{internship.stipend}</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-yellow-400 text-lg">⭐</span>
+                          <span className="text-gray-300">{internship.rating} • {internship.applicants} applied</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-white mb-3">About This Internship</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {internship.description}
+                    </p>
+                  </div>
+
+                  {/* Skills & Benefits */}
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
+                        <span className="text-cyan-400">🎯</span>
+                        Skills Required
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {internship.requirements.map((skill, idx) => (
+                          <span key={idx} 
+                            className="px-3 py-2 bg-gray-800 text-cyan-300 rounded-lg text-sm border border-gray-700">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
+                        <span className="text-green-400">🎁</span>
+                        What You'll Get
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {internship.benefits.map((benefit, idx) => (
+                          <span key={idx} 
+                            className="px-3 py-2 bg-gray-800 text-green-300 rounded-lg text-sm border border-gray-700">
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
-                <button
-                  onClick={() => toggleSaveJob(internship.id)}
-                  className={`text-xl transition-colors ${
-                    savedJobs.has(internship.id) ? 'text-yellow-400' : 'text-gray-600 hover:text-yellow-400'
-                  }`}
-                >
-                  {savedJobs.has(internship.id) ? '⭐' : '☆'}
-                </button>
-              </div>
 
-              {/* Type Badge */}
-              <div className="mb-4">
-                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                  internship.type === 'Internship' 
-                    ? 'bg-blue-900 text-blue-300'
-                    : 'bg-purple-900 text-purple-300'
-                }`}>
-                  {internship.type}
-                </span>
-                {internship.urgent && (
-                  <span className="ml-2 px-3 py-1 bg-red-900 text-red-300 rounded-full text-xs font-medium">
-                    🔥 Urgent
-                  </span>
-                )}
-              </div>
+                {/* Right Section - Action Panel */}
+                <div className="space-y-6">
+                  {/* Status & Urgency */}
+                  <div className="space-y-3">
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-4 py-2 bg-blue-900 text-blue-300 rounded-full text-sm font-medium border border-blue-700">
+                        💼 Internship Position
+                      </span>
+                      {internship.urgent && (
+                        <span className="px-4 py-2 bg-red-900 text-red-300 rounded-full text-sm font-medium border border-red-700 animate-pulse">
+                          🔥 Urgent Hiring
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      Posted {internship.posted}
+                    </p>
+                  </div>
 
-              {/* Job Details */}
-              <div className="space-y-2 mb-4 text-sm">
-                <div className="flex items-center gap-2">
-                  <span className="text-blue-400">📍</span>
-                  <span className="text-gray-300">{internship.location}</span>
+                  {/* Action Buttons */}
+                  <div className="space-y-4">
+                    <button className="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                      Apply for This Internship
+                    </button>
+                    <button className="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold py-3 px-6 rounded-xl transition-all duration-300 border border-gray-700 hover:border-gray-600">
+                      Learn More About Company
+                    </button>
+                    <button className="w-full bg-purple-900 hover:bg-purple-800 text-purple-300 font-semibold py-3 px-6 rounded-xl transition-all duration-300 border border-purple-700">
+                      Share This Opportunity
+                    </button>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-orange-400">⏰</span>
-                  <span className="text-gray-300">{internship.duration}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-green-400">💰</span>
-                  <span className="text-green-400 font-medium">{internship.stipend}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-yellow-400">⭐</span>
-                  <span className="text-gray-300">{internship.rating} • {internship.applicants} applied</span>
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                {internship.description}
-              </p>
-
-              {/* Skills */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {internship.requirements.slice(0, 3).map((skill, idx) => (
-                  <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-300 rounded text-xs">
-                    {skill}
-                  </span>
-                ))}
-                {internship.requirements.length > 3 && (
-                  <span className="px-2 py-1 bg-gray-800 text-gray-500 rounded text-xs">
-                    +{internship.requirements.length - 3}
-                  </span>
-                )}
-              </div>
-
-              {/* Apply Button */}
-              <button className="w-full bg-green-600 hover:bg-green-500 text-white font-medium py-3 rounded-lg transition-colors duration-300">
-                Apply Now
-              </button>
-              
-              <div className="text-xs text-gray-500 text-center mt-2">
-                Posted {internship.posted}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Load More */}
-        <div className="text-center mt-12">
-          <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg border border-gray-600 transition-colors duration-300">
-            Load More Jobs
-          </button>
-        </div>
+        {/* Load More Section */}
+        {filteredInternships.length > 0 && (
+          <div className="text-center mt-16">
+            <button className="bg-gray-800 hover:bg-gray-700 text-white font-semibold px-12 py-4 rounded-xl border-2 border-gray-700 hover:border-gray-600 transition-all duration-300">
+              Discover More Opportunities
+            </button>
+          </div>
+        )}
 
-        {/* Simple Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center">
-          <div>
-            <div className="text-3xl font-bold text-green-400">1000+</div>
-            <div className="text-gray-400">Active Jobs</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-cyan-400">250+</div>
-            <div className="text-gray-400">Companies</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-purple-400">5000+</div>
-            <div className="text-gray-400">Students Placed</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-yellow-400">98%</div>
-            <div className="text-gray-400">Success Rate</div>
+        {/* Platform Statistics */}
+        <div className="mt-20 bg-gray-900 rounded-2xl border border-gray-800 p-12">
+          <h3 className="text-3xl font-bold text-center text-white mb-12">
+            Why Students Choose <span className="text-green-400">InternTafuta</span>
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-3">
+              <div className="text-4xl font-bold text-green-400">500+</div>
+              <div className="text-gray-400">Active Internships</div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-4xl font-bold text-cyan-400">150+</div>
+              <div className="text-gray-400">Partner Companies</div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-4xl font-bold text-purple-400">2,500+</div>
+              <div className="text-gray-400">Students Placed</div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-4xl font-bold text-yellow-400">95%</div>
+              <div className="text-gray-400">Success Rate</div>
+            </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-16 pb-8">
-          <div className="border-t border-gray-800 pt-8">
-            <p className="text-gray-500">© 2025 InternConnect - Connecting talent with opportunity</p>
-          </div>
-        </div>
+        <footer className="mt-16 text-center py-8 border-t border-gray-800">
+          <p className="text-gray-400">
+            © 2025 InternTafuta - Empowering Students Across Tanzania
+          </p>
+        </footer>
       </div>
     </div>
   );
