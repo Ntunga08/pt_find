@@ -184,7 +184,7 @@ const Auth = () => {
                 </span>
               ) : (
                 <>
-                  {isLogin ? '🚀Sign In' : 'Create Account'}
+                  {isLogin ? 'Sign In' : 'Create Account'}
                 </>
               )}
             </button>
