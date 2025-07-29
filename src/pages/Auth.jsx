@@ -1,28 +1,59 @@
-import React, { useState } from 'react';  // Fix import to include useState
+import React, { useState } from 'react';
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [email, setEmail] = useState('');                // lowercase "email" for state variable
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');  // consistent camelCase
+  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || !password || (isLogin ? false : !confirmPassword)) {
+    if (!email || !password || (!isLogin && !confirmPassword)) {
       alert('Please fill in all fields');
       return;
     }
+
     if (isLogin) {
-      // Handle login logic
-      console.log('Logging in with', { email, password });
+      // Login request
+      try {
+        const res = await fetch('http://localhost:8000/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password }),
+        });
+        const data = await res.json();
+        if (res.ok) {
+          alert('Login successful!');
+          // Handle login success (e.g., save token, redirect)
+        } else {
+          alert(data.detail || 'Login failed');
+        }
+      } catch (err) {
+        alert('Error connecting to backend');
+      }
     } else {
-      // Handle signup logic
+      // Registration request
       if (password !== confirmPassword) {
         alert('Passwords do not match');
         return;
       }
-      console.log('Signing up with', { email, password });
+      try {
+        const res = await fetch('http://localhost:8000/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password, confirm_password: confirmPassword }),
+        });
+        const data = await res.json();
+        if (res.ok) {
+          alert('Registration successful!');
+          setIsLogin(true);
+        } else {
+          alert(data.detail || 'Registration failed');
+        }
+      } catch (err) {
+        alert('Error connecting to backend');
+      }
     }
   };
 
