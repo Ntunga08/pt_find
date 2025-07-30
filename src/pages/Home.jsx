@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Home = () => {
   const handleInternshipsClick = () => {
     // Replace with your navigation logic
