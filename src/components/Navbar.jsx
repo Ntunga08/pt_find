@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className="text-3xl">💼</div>
             <div>
               <a href="/" className="text-2xl font-bold text-white hover:text-teal-100 transition-colors duration-300">
-                JobConnect
+                InternConnect
               </a>
               <div className="text-xs text-teal-100 font-light">
                 Find Your Future
