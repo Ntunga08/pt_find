@@ -8,100 +8,67 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-teal-400 via-teal-500 to-green-500 shadow-lg sticky top-0 z-50">
+    <nav className="bg-slate-700 bg-opacity-90 backdrop-blur-sm shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo / Site Name */}
           <div className="flex items-center space-x-3">
-            <div className="text-3xl">💼</div>
+            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+              <div className="text-slate-700 text-lg font-bold">IC</div>
+            </div>
             <div>
-              <a href="/" className="text-2xl font-bold text-white hover:text-teal-100 transition-colors duration-300">
-                InternConnect
+              <a href="/" className="text-xl font-bold text-white hover:text-gray-200 transition-colors duration-300">
+                INTERNCONNECT
               </a>
-              <div className="text-xs text-teal-100 font-light">
-                Find Your Future
-              </div>
             </div>
           </div>
 
-          {/* Desktop Navigation Links */}
+          {/* Desktop Navigation Links - Centered */}
           <div className="hidden md:flex items-center space-x-8">
             <a 
               href="/" 
-              className="relative text-white hover:text-teal-100 transition-colors duration-300 font-medium group"
+              className="text-white hover:text-gray-200 transition-colors duration-300 font-medium"
             >
-              <span className="flex items-center space-x-2">
-                <span>🏠</span>
-                <span>HOME</span>
-              </span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
-            </a>
-            
-            <a 
-              href="/internships" 
-              className="relative text-white hover:text-teal-100 transition-colors duration-300 font-medium group"
-            >
-              <span className="flex items-center space-x-2">
-                <span>💼</span>
-                <span>INTERNSHIPS</span>
-              </span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
-            </a>
-            
-            <a 
-              href="/PT" 
-              className="relative text-white hover:text-teal-100 transition-colors duration-300 font-medium group"
-            >
-              <span className="flex items-center space-x-2">
-                <span>🎓</span>
-                <span>PRACTICAL TRAINING</span>
-              </span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+              Home
             </a>
             
             <a 
               href="/about" 
-              className="relative text-white hover:text-teal-100 transition-colors duration-300 font-medium group"
+              className="text-white hover:text-gray-200 transition-colors duration-300 font-medium"
             >
-              <span className="flex items-center space-x-2">
-                <span>🛍️</span>
-                <span>ABOUT US </span>
-              </span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+              About
+            </a>
+            
+            <a 
+              href="/internships" 
+              className="text-white hover:text-gray-200 transition-colors duration-300 font-medium"
+            >
+              Internships
             </a>
             
             <a 
               href="/contact" 
-              className="relative text-white hover:text-teal-100 transition-colors duration-300 font-medium group"
+              className="text-white hover:text-gray-200 transition-colors duration-300 font-medium"
             >
-              <span className="flex items-center space-x-2">
-                <span>📞</span>
-                <span>CONTACT</span>
-              </span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
+              Contact
             </a>
-            
-            <div className="flex items-center space-x-4 ml-6 pl-6 border-l border-teal-300">
-              <a 
-                href="/login" 
-                className="text-white hover:text-teal-100 transition-colors duration-300 font-medium"
-              >
-                Sign In
-              </a>
-              <a 
-                href="/register" 
-                className="bg-white hover:bg-teal-50 text-teal-600 px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 border-2 border-white hover:border-teal-100"
-              >
-                Get Started
-              </a>
-            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <a 
+              href="/register" 
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md font-semibold transition-all duration-300 shadow-lg transform hover:scale-105"
+            >
+              Plan Your Future
+            </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="text-white hover:text-teal-100 transition-colors duration-300 p-2"
+              className="text-white hover:text-gray-200 transition-colors duration-300 p-2"
               aria-label="Toggle mobile menu"
             >
               <svg 
@@ -124,66 +91,46 @@ const Navbar = () => {
         <div className={`md:hidden mt-6 transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-2xl p-6 space-y-4 border border-teal-200 shadow-2xl">
+          <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-6 space-y-4 shadow-xl">
             <a 
               href="/" 
-              className="flex items-center space-x-3 text-teal-700 hover:text-teal-900 transition-colors duration-300 py-3 px-4 rounded-xl hover:bg-teal-50"
+              className="block text-slate-700 hover:text-slate-900 transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <span className="text-lg">🏠</span>
-              <span className="font-medium">HOME</span>
-            </a>
-            
-            <a 
-              href="/internships" 
-              className="flex items-center space-x-3 text-teal-700 hover:text-teal-900 transition-colors duration-300 py-3 px-4 rounded-xl hover:bg-teal-50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <span className="text-lg">💼</span>
-              <span className="font-medium">INTERNSHIPS</span>
-            </a>
-            
-            <a 
-              href="/PT" 
-              className="flex items-center space-x-3 text-teal-700 hover:text-teal-900 transition-colors duration-300 py-3 px-4 rounded-xl hover:bg-teal-50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <span className="text-lg">🎓</span>
-              <span className="font-medium">RESOURCES</span>
+              Home
             </a>
             
             <a 
               href="/about" 
-              className="flex items-center space-x-3 text-teal-700 hover:text-teal-900 transition-colors duration-300 py-3 px-4 rounded-xl hover:bg-teal-50"
+              className="block text-slate-700 hover:text-slate-900 transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <span className="text-lg">🛍️</span>
-              <span className="font-medium">SHOP</span>
+              About
+            </a>
+            
+            <a 
+              href="/internships" 
+              className="block text-slate-700 hover:text-slate-900 transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Internships
             </a>
             
             <a 
               href="/contact" 
-              className="flex items-center space-x-3 text-teal-700 hover:text-teal-900 transition-colors duration-300 py-3 px-4 rounded-xl hover:bg-teal-50"
+              className="block text-slate-700 hover:text-slate-900 transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-50 font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <span className="text-lg">📞</span>
-              <span className="font-medium">CONTACT</span>
+              Contact
             </a>
             
-            <div className="pt-4 border-t border-teal-200 space-y-3">
-              <a 
-                href="/login" 
-                className="block text-teal-700 hover:text-teal-900 transition-colors duration-300 py-3 px-4 rounded-xl hover:bg-teal-50 font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Sign In
-              </a>
+            <div className="pt-4 border-t border-gray-200">
               <a 
                 href="/register" 
-                className="block bg-teal-600 hover:bg-teal-700 text-white px-5 py-3 rounded-xl font-semibold transition-all duration-300 text-center border-2 border-teal-600"
+                className="block bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-lg font-semibold transition-all duration-300 text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Get Started
+                Plan Your Future
               </a>
             </div>
           </div>
